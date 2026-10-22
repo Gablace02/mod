@@ -1,0 +1,65 @@
+scripted_gui = {
+
+	# Conexión del botón superior y atajo de teclado
+	gemini_advisor_topbar_button = {
+		context_type = player_context
+		window_name = "gemini_advisor_topbar_button"
+
+		visible = {
+			always = yes
+		}
+
+		effects = {
+			gemini_open_button_click = {
+				if = {
+					limit = { has_country_flag = gemini_advisor_window_open }
+					clr_country_flag = gemini_advisor_window_open
+				}
+				else = {
+					set_country_flag = gemini_advisor_window_open
+				}
+			}
+		}
+	}
+
+	# Conexión de la ventana flotante y sus botones
+	gemini_advisor_window = {
+		context_type = player_context
+		window_name = "gemini_advisor_window"
+
+		visible = {
+			has_country_flag = gemini_advisor_window_open
+		}
+
+		effects = {
+			gemini_close_button_click = {
+				clr_country_flag = gemini_advisor_window_open
+			}
+
+			gemini_btn_industry_click = {
+				log = "[GEMINI_QUERY_INDUSTRY]: Solicitud de analisis industrial"
+				country_event = { id = gemini_advisor.1 }
+			}
+
+			gemini_btn_tech_click = {
+				log = "[GEMINI_QUERY_TECH]: Solicitud de investigacion y focos"
+				country_event = { id = gemini_advisor.2 }
+			}
+
+			gemini_btn_military_click = {
+				log = "[GEMINI_QUERY_MILITARY]: Solicitud de analisis militar"
+				country_event = { id = gemini_advisor.3 }
+			}
+
+			gemini_btn_resources_click = {
+				log = "[GEMINI_QUERY_RESOURCES]: Solicitud de recursos"
+				country_event = { id = gemini_advisor.4 }
+			}
+
+			gemini_btn_war_click = {
+				log = "[GEMINI_QUERY_WAR]: Solicitud de estrategia de guerra"
+				country_event = { id = gemini_advisor.4 }
+			}
+		}
+	}
+}
