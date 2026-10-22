@@ -1,0 +1,72 @@
+add_namespace = gemini_advisor
+
+# Evento 10: Notificacion de Bienvenida al Iniciar Partida
+country_event = {
+	id = gemini_advisor.10
+	title = gemini_advisor.10.t
+	desc = gemini_advisor.10.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = gemini_advisor.10.a
+		custom_effect_tooltip = gemini_advisor.10.a_tt
+	}
+}
+
+# Evento 1: Industria
+country_event = {
+	id = gemini_advisor.1
+	title = gemini_advisor.1.t
+	desc = gemini_advisor.1.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = gemini_advisor.ok
+	}
+}
+
+# Evento 2: Investigacion
+country_event = {
+	id = gemini_advisor.2
+	title = gemini_advisor.2.t
+	desc = gemini_advisor.2.d
+	picture = GFX_report_event_physics_lab
+
+	is_triggered_only = yes
+
+	option = {
+		name = gemini_advisor.ok
+	}
+}
+
+# Evento 3: Militar
+country_event = {
+	id = gemini_advisor.3
+	title = gemini_advisor.3.t
+	desc = gemini_advisor.3.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	option = {
+		name = gemini_advisor.ok
+	}
+}
+
+# Evento 4: General
+country_event = {
+	id = gemini_advisor.4
+	title = gemini_advisor.4.t
+	desc = gemini_advisor.4.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = gemini_advisor.ok
+	}
+}

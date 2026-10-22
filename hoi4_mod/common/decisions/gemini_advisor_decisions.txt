@@ -1,0 +1,82 @@
+gemini_advisor_category = {
+
+	# 1. Analizar Industria y Economia
+	gemini_ask_industry = {
+		icon = generic_industry
+		cost = 0
+		days_remove = 1
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+			log = "[GEMINI_QUERY_INDUSTRY]: Solicitud de analisis industrial"
+			country_event = { id = gemini_advisor.1 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# 2. Consultar Prioridad de Investigacion y Focos
+	gemini_ask_tech = {
+		icon = generic_research
+		cost = 0
+		days_remove = 1
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+			log = "[GEMINI_QUERY_TECH]: Solicitud de investigacion y focos"
+			country_event = { id = gemini_advisor.2 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# 3. Consultar Doctrina y Plantillas de Division
+	gemini_ask_military = {
+		icon = generic_army
+		cost = 0
+		days_remove = 1
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+			log = "[GEMINI_QUERY_MILITARY]: Solicitud de analisis militar"
+			country_event = { id = gemini_advisor.3 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# 4. Diagnostico General del Imperio
+	gemini_ask_general = {
+		icon = generic_intel_bonus
+		cost = 0
+		days_remove = 1
+		available = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+			log = "[GEMINI_QUERY_GENERAL]: Solicitud de diagnostico general"
+			country_event = { id = gemini_advisor.4 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

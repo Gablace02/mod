@@ -1,0 +1,11 @@
+gemini_advisor_category = {
+	icon = generic_propaganda
+	picture = GFX_decision_cat_generic_crisis
+	allowed = {
+		always = yes
+	}
+	visible = {
+		always = yes
+	}
+	priority = 100
+}

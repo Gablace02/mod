@@ -1,0 +1,138 @@
+guiTypes = {
+
+	# =========================================================================
+	# 1. BOTON PRINCIPAL ADAPTATIVO (ESQUINA SUPERIOR DERECHA)
+	# Posicionado en coordenadas seguras para resolucion 1280x720 y 1366x768
+	# =========================================================================
+	containerWindowType = {
+		name = "gemini_advisor_topbar_button"
+		position = { x = -280 y = 4 }
+		orientation = upper_right
+		size = { width = 48 height = 36 }
+
+		buttonType = {
+			name = "gemini_open_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_sort_button_80x29"
+			buttonText = "🤖 IA"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "GEMINI_OPEN_TOOLTIP"
+			shortcut = "ctrl+shift+g"
+		}
+	}
+
+	# =========================================================================
+	# 2. VENTANA PRINCIPAL FLOTANTE DEL ASESOR
+	# Dimensiones compactas (540x520) para encajar perfectamente en 1280x720
+	# =========================================================================
+	containerWindowType = {
+		name = "gemini_advisor_window"
+		position = { x = 200 y = 80 }
+		size = { width = 540 height = 520 }
+		moveable = yes
+		click_to_front = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_1b_border"
+		}
+
+		# CABECERA Y TITULO
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 20 y = 14 }
+			font = "hoi_20b"
+			text = "GEMINI_WINDOW_TITLE"
+			maxWidth = 460
+			maxHeight = 28
+			fixedsize = yes
+		}
+
+		# BOTON DE CIERRE [X]
+		buttonType = {
+			name = "gemini_close_button"
+			position = { x = -42 y = 12 }
+			orientation = upper_right
+			quadTextureSprite = "GFX_closebutton"
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE"
+		}
+
+		# PANEL DE CHAT Y RESPUESTA DE GEMINI
+		containerWindowType = {
+			name = "gemini_chat_box"
+			position = { x = 16 y = 48 }
+			size = { width = 508 height = 300 }
+
+			background = {
+				name = "chat_bg"
+				quadTextureSprite = "GFX_tiled_paper_bg"
+			}
+
+			instantTextBoxType = {
+				name = "gemini_response_text"
+				position = { x = 16 y = 14 }
+				font = "hoi_16mbs"
+				text = "GEMINI_CHAT_DISPLAY_TEXT"
+				maxWidth = 476
+				maxHeight = 272
+				scrollbartype = "standardtext_slider"
+			}
+		}
+
+		# BOTONES DE CONSULTA RAPIDA / CHAT
+		containerWindowType = {
+			name = "gemini_actions_panel"
+			position = { x = 16 y = 360 }
+			size = { width = 508 height = 145 }
+
+			# Fila 1: Industria y Tecnologia
+			buttonType = {
+				name = "gemini_btn_industry"
+				position = { x = 10 y = 8 }
+				quadTextureSprite = "GFX_sort_button_202x29"
+				buttonText = "GEMINI_BTN_INDUSTRY"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "GEMINI_BTN_INDUSTRY_TT"
+			}
+
+			buttonType = {
+				name = "gemini_btn_tech"
+				position = { x = 270 y = 8 }
+				quadTextureSprite = "GFX_sort_button_202x29"
+				buttonText = "GEMINI_BTN_TECH"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "GEMINI_BTN_TECH_TT"
+			}
+
+			# Fila 2: Militar y Recursos
+			buttonType = {
+				name = "gemini_btn_military"
+				position = { x = 10 y = 48 }
+				quadTextureSprite = "GFX_sort_button_202x29"
+				buttonText = "GEMINI_BTN_MILITARY"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "GEMINI_BTN_MILITARY_TT"
+			}
+
+			buttonType = {
+				name = "gemini_btn_resources"
+				position = { x = 270 y = 48 }
+				quadTextureSprite = "GFX_sort_button_202x29"
+				buttonText = "GEMINI_BTN_RESOURCES"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "GEMINI_BTN_RESOURCES_TT"
+			}
+
+			# Fila 3: Estrategia de Guerra
+			buttonType = {
+				name = "gemini_btn_war"
+				position = { x = 140 y = 88 }
+				quadTextureSprite = "GFX_sort_button_202x29"
+				buttonText = "GEMINI_BTN_WAR"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "GEMINI_BTN_WAR_TT"
+			}
+		}
+	}
+}

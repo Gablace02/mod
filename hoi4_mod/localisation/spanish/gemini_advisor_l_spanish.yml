@@ -1,0 +1,44 @@
+﻿l_spanish:
+ GEMINI_OPEN_TOOLTIP:0 "§HAbrir Asesor Estratégico Gemini IA§!\n§GAtajo: Ctrl + G§!\nConsulta a la inteligencia artificial cómo optimizar tu imperio en tiempo real."
+ GEMINI_WINDOW_TITLE:0 "§HAsesor Estratégico Gemini IA§!"
+ GEMINI_CHAT_DISPLAY_TEXT:0 "§T¡Saludos, Comandante!§!\n\nSoy tu Asesor Estratégico conectado a Gemini IA. Utiliza los botones de abajo para solicitar análisis en vivo de tu situación económica, industrial o militar:\n\n• §YIndustria§!: Balance de fábricas civiles vs militares.\n• §YTecnología§!: Focos prioritarios y ranuras de investigación.\n• §YEjército§!: Plantillas de división, doctrina y aire.\n• §YRecursos§!: Solución a cuellos de botella.\n• §YEstrategia§!: Plan militar y recomendaciones para la guerra."
+
+ GEMINI_BTN_INDUSTRY:0 "🏭 Optimizar Industria"
+ GEMINI_BTN_INDUSTRY_TT:0 "§HAnalizar Industria y Producción§!\nRevisa tu ratio de fábricas civiles y militares para optimizar tu capacidad de guerra."
+
+ GEMINI_BTN_TECH:0 "🔬 Focos e Investigación"
+ GEMINI_BTN_TECH_TT:0 "§HConsultar Tecnología§!\nConsejos sobre qué investigar y qué focos nacionales elegir según el año actual."
+
+ GEMINI_BTN_MILITARY:0 "🪖 Plantillas de División"
+ GEMINI_BTN_MILITARY_TT:0 "§HConsultar Doctrina y División§!\nDiseños de plantillas de combate óptimas según tu equipamiento."
+
+ GEMINI_BTN_RESOURCES:0 "⛏️ Gestión de Recursos"
+ GEMINI_BTN_RESOURCES_TT:0 "§HDiagnosticar Recursos§!\nIdentifica carencias de petróleo, caucho o acero y cómo resolverlas."
+
+ GEMINI_BTN_WAR:0 "⚡ Estrategia de Guerra"
+ GEMINI_BTN_WAR_TT:0 "§HPlan General de Combate§!\nRecomendaciones para defender fronteras o invadir objetivos."
+
+ gemini_advisor_category:0 "§HAsesor Estratégico Gemini IA§!"
+ gemini_advisor_category_desc:0 "§YTu ayudante de Inteligencia Artificial para optimizar tu producción, divisiones, economía y focos en tiempo real.§!"
+
+ gemini_ask_industry:0 "Optimizar Industria y Economía"
+ gemini_ask_industry_desc:0 "Consulta a Gemini IA cómo balancear tus fábricas civiles vs militares."
+
+ gemini_ask_tech:0 "Prioridad de Investigación y Focos"
+ gemini_ask_tech_desc:0 "Solicita consejo sobre tecnologías e investigaciones nacionales prioritarias."
+
+ gemini_ask_military:0 "Plantillas de División y Doctrina"
+ gemini_ask_military_desc:0 "Pide recomendaciones de plantillas de combate eficaces."
+
+ gemini_ask_general:0 "Diagnóstico Estratégico General"
+ gemini_ask_general_desc:0 "Informe completo del estado de tu nación."
+
+ gemini_advisor.ok:0 "Entendido, gracias Asesor."
+ gemini_advisor.1.t:0 "Asesor Gemini: Optimización Industrial"
+ gemini_advisor.1.d:0 "Regla de oro: Antes de 1938 construye únicamente Fábricas Civiles e Infraestructura al máximo en estados con más recursos. Transiciona a Militares 1.5 años antes de tu guerra principal. Mantener ratio mín 0.45 civ/mil."
+ gemini_advisor.2.t:0 "Asesor Gemini: Investigación y Focos"
+ gemini_advisor.2.d:0 "Prioridad absoluta: Herramientas Básicas y Construcción I/II de la rama de Industria. Luego Computación (bono velocidad investigación) y artillería o doctrinas según tu doctrina terrestre."
+ gemini_advisor.3.t:0 "Asesor Gemini: Diseño de Divisiones"
+ gemini_advisor.3.d:0 "Plantilla estándar de combate: 9 Infantería + 1 o 2 Artillería de línea. Compañías de apoyo recomendadas: Ingenieros, Artillería de apoyo y Antiaéreo (vital si no tienes superioridad aérea)."
+ gemini_advisor.4.t:0 "Asesor Gemini: Diagnóstico General"
+ gemini_advisor.4.d:0 "Estado General: Revisa reservas de petróleo y caucho. Sin caucho tus líneas de cazas perderán eficacia drásticamente. Construye refinerías sintéticas si no tienes acceso marítimo seguro a recursos."
