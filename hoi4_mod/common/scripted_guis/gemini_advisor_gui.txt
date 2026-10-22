@@ -1,64 +1,78 @@
 scripted_gui = {
-
-	# Conexión del botón superior y atajo de teclado
+	# =========================================================================
+	# LÓGICA DE TELEMETRÍA Y DETECCIÓN DE DOCTRINAS (UNIVERSAL HOI4)
+	# =========================================================================
 	gemini_advisor_topbar_button = {
 		context_type = player_context
 		window_name = "gemini_advisor_topbar_button"
-
-		visible = {
-			always = yes
-		}
-
+		visible = { always = yes }
 		effects = {
 			gemini_open_button_click = {
+				set_temp_variable = { t_civs = num_of_civilian_factories }
+				set_temp_variable = { t_mils = num_of_military_factories }
+				set_temp_variable = { t_docks = num_of_naval_factories }
+				set_temp_variable = { t_pp = political_power }
+				set_temp_variable = { t_stab = stability }
+				set_temp_variable = { t_mp = manpower }
+				set_temp_variable = { t_ws = has_war_support }
+				set_temp_variable = { t_divs = num_divisions }
+				set_temp_variable = { t_convoys = num_of_convoys }
+				
+				# Detectar estado de guerra
 				if = {
-					limit = { has_country_flag = gemini_advisor_window_open }
-					clr_country_flag = gemini_advisor_window_open
+					limit = { has_war = yes }
+					set_temp_variable = { t_war = 1 }
 				}
 				else = {
-					set_country_flag = gemini_advisor_window_open
+					set_temp_variable = { t_war = 0 }
 				}
-			}
-		}
-	}
 
-	# Conexión de la ventana flotante y sus botones
-	gemini_advisor_window = {
-		context_type = player_context
-		window_name = "gemini_advisor_window"
+				# Nivel de combustible
+				if = {
+					limit = { has_fuel < 0.25 }
+					set_temp_variable = { t_fuel = 1 }
+				}
+				else_if = {
+					limit = { has_fuel < 0.60 }
+					set_temp_variable = { t_fuel = 2 }
+				}
+				else = {
+					set_temp_variable = { t_fuel = 3 }
+				}
 
-		visible = {
-			has_country_flag = gemini_advisor_window_open
-		}
+				# Detección Universal de Doctrina Terrestre por Nación
+				set_temp_variable = { t_doctrina = 0 }
+				if = {
+					limit = { tag = GER }
+					set_temp_variable = { t_doctrina = 1 }
+				}
+				else_if = {
+					limit = { tag = USA }
+					set_temp_variable = { t_doctrina = 2 }
+				}
+				else_if = {
+					limit = {
+						OR = {
+							tag = FRA
+							tag = ENG
+							tag = ITA
+							tag = JAP
+							tag = POL
+						}
+					}
+					set_temp_variable = { t_doctrina = 3 }
+				}
+				else_if = {
+					limit = {
+						OR = {
+							tag = SOV
+							tag = CHI
+						}
+					}
+					set_temp_variable = { t_doctrina = 4 }
+				}
 
-		effects = {
-			gemini_close_button_click = {
-				clr_country_flag = gemini_advisor_window_open
-			}
-
-			gemini_btn_industry_click = {
-				log = "[GEMINI_QUERY_INDUSTRY]: Solicitud de analisis industrial"
-				country_event = { id = gemini_advisor.1 }
-			}
-
-			gemini_btn_tech_click = {
-				log = "[GEMINI_QUERY_TECH]: Solicitud de investigacion y focos"
-				country_event = { id = gemini_advisor.2 }
-			}
-
-			gemini_btn_military_click = {
-				log = "[GEMINI_QUERY_MILITARY]: Solicitud de analisis militar"
-				country_event = { id = gemini_advisor.3 }
-			}
-
-			gemini_btn_resources_click = {
-				log = "[GEMINI_QUERY_RESOURCES]: Solicitud de recursos"
-				country_event = { id = gemini_advisor.4 }
-			}
-
-			gemini_btn_war_click = {
-				log = "[GEMINI_QUERY_WAR]: Solicitud de estrategia de guerra"
-				country_event = { id = gemini_advisor.4 }
+				log = "|TAG=[This.GetTag]|Fecha=[GetDateText]|Civs=[?t_civs]|Mils=[?t_mils]|Astilleros=[?t_docks]|Manpower=[?t_mp]|PP=[?t_pp]|Estabilidad=[?t_stab]|ApoyoB=[?t_ws]|Divs=[?t_divs]|Convoys=[?t_convoys]|Guerra=[?t_war]|Combustible=[?t_fuel]|Ideologia=[Root.GetRulingIdeology]|Doctrina=[?t_doctrina]"
 			}
 		}
 	}

@@ -1,0 +1,10 @@
+gemini_minister_category = {
+	icon = generic_industry
+	allowed = {
+		always = yes
+	}
+	visible = {
+		always = yes
+	}
+	priority = 100
+}

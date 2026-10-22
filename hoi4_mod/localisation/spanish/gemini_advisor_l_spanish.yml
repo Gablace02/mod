@@ -1,44 +1,49 @@
 ﻿l_spanish:
- GEMINI_OPEN_TOOLTIP:0 "§HAbrir Asesor Estratégico Gemini IA§!\n§GAtajo: Ctrl + G§!\nConsulta a la inteligencia artificial cómo optimizar tu imperio en tiempo real."
- GEMINI_WINDOW_TITLE:0 "§HAsesor Estratégico Gemini IA§!"
- GEMINI_CHAT_DISPLAY_TEXT:0 "§T¡Saludos, Comandante!§!\n\nSoy tu Asesor Estratégico conectado a Gemini IA. Utiliza los botones de abajo para solicitar análisis en vivo de tu situación económica, industrial o militar:\n\n• §YIndustria§!: Balance de fábricas civiles vs militares.\n• §YTecnología§!: Focos prioritarios y ranuras de investigación.\n• §YEjército§!: Plantillas de división, doctrina y aire.\n• §YRecursos§!: Solución a cuellos de botella.\n• §YEstrategia§!: Plan militar y recomendaciones para la guerra."
+ GEMINI_SYNC_TOOLTIP:0 "§HEnviar datos al Gabinete de Asesores§!\nTransmite la inteligencia nacional en tiempo real a tu Centro de Mando Web."
 
- GEMINI_BTN_INDUSTRY:0 "🏭 Optimizar Industria"
- GEMINI_BTN_INDUSTRY_TT:0 "§HAnalizar Industria y Producción§!\nRevisa tu ratio de fábricas civiles y militares para optimizar tu capacidad de guerra."
+ # Categoría y Decisiones
+ gemini_minister_category:0 "§H[🤖] Gabinete de Planificación Nacional IA§!"
+ gemini_minister_category_desc:0 "§YDelega la microgestión de fábricas, logística y suministros a tus Asesores IA para enfocarte en el liderazgo supremo y la guerra.§!"
+ 
+ gemini_toggle_autopilot:0 "⚙️ Alternar Piloto Automático Industrial"
+ gemini_toggle_autopilot_desc:0 "El Ministro de Economía planificará y construirá automáticamente fábricas cada 30 días según las necesidades del país."
+ 
+ gemini_autopilot_cycle:0 "🔄 Ministro de Economía: Asignando Obras Nacionales..."
+ gemini_autopilot_cycle_desc:0 "El Asesor está evaluando estados con huecos libres y asignando construcciones."
+ 
+ gemini_order_civs:0 "🏗️ Orden Ejecutiva: Expandir Complejo Industrial Civil"
+ gemini_order_civs_desc:0 "Ordena la construcción inmediata de fábricas civiles en los mejores estados."
+ 
+ gemini_order_mils:0 "⚔️ Orden Ejecutiva: Acelerar Producción Bélica Pesada"
+ gemini_order_mils_desc:0 "Ordena la construcción inmediata de fábricas militares para rearmar al ejército."
+ 
+ gemini_order_infra:0 "🛤️ Orden Ejecutiva: Modernizar Red de Logística y Transporte"
+ gemini_order_infra_desc:0 "Construye infraestructura en estados con deficiencias de suministro."
 
- GEMINI_BTN_TECH:0 "🔬 Focos e Investigación"
- GEMINI_BTN_TECH_TT:0 "§HConsultar Tecnología§!\nConsejos sobre qué investigar y qué focos nacionales elegir según el año actual."
+ gemini_order_refinery:0 "🛢️ Orden Ejecutiva: Programa de Autarquía de Combustible"
+ gemini_order_refinery_desc:0 "Comisiona una refinería sintética para asegurar caucho y petróleo independiente del mar."
 
- GEMINI_BTN_MILITARY:0 "🪖 Plantillas de División"
- GEMINI_BTN_MILITARY_TT:0 "§HConsultar Doctrina y División§!\nDiseños de plantillas de combate óptimas según tu equipamiento."
+ # Eventos Presidenciales Dinámicos por Ideología
+ gemini_minister.1.t_democratic:0 "§HSeñor Presidente: Hora de Proteger la República§!"
+ gemini_minister.1.d_democratic:0 "Señor Presidente, el Parlamento y nuestros analistas económicos confirman que nuestra base industrial civil es sólida. La tensión internacional crece y nuestras fuerzas armadas carecen de armamento moderno.\n\n¿Autoriza al Gabinete a reorientar la producción hacia fábricas militares para salvaguardar la libertad de nuestra nación?"
 
- GEMINI_BTN_RESOURCES:0 "⛏️ Gestión de Recursos"
- GEMINI_BTN_RESOURCES_TT:0 "§HDiagnosticar Recursos§!\nIdentifica carencias de petróleo, caucho o acero y cómo resolverlas."
+ gemini_minister.1.t_fascism:0 "§H¡Mi Líder Supremo! Es Hora del Rearme de la Patria§!"
+ gemini_minister.1.d_fascism:0 "¡Mi Conductor! Nuestras fábricas civiles han establecido los cimientos de la patria. El destino de grandeza de nuestro pueblo exige armas, tanques y cañones para aplastar a cualquier enemigo exterior.\n\n¿Ordena la movilización militar total de nuestra industria pesada?"
 
- GEMINI_BTN_WAR:0 "⚡ Estrategia de Guerra"
- GEMINI_BTN_WAR_TT:0 "§HPlan General de Combate§!\nRecomendaciones para defender fronteras o invadir objetivos."
+ gemini_minister.1.t_communism:0 "§H¡Camarada Secretario General! Industrialización Proletaria de Guerra§!"
+ gemini_minister.1.d_communism:0 "¡Camarada! El Plan Quinquenal de la clase obrera ha consolidado una infraestructura envidiable. El imperialismo internacional se prepara para la guerra y debemos armar al Ejército Rojo.\n\n¿Autoriza al Comité Central a dirigir todos los recursos a las fábricas de armamento del pueblo?"
 
- gemini_advisor_category:0 "§HAsesor Estratégico Gemini IA§!"
- gemini_advisor_category_desc:0 "§YTu ayudante de Inteligencia Artificial para optimizar tu producción, divisiones, economía y focos en tiempo real.§!"
+ gemini_minister.1.t_neutrality:0 "§HSu Majestad: El Fortalecimiento de la Corona§!"
+ gemini_minister.1.d_neutrality:0 "Su Majestad, los consejeros del Reino informan que las arcas y las obras civiles son prósperas. Sin embargo, los reinos vecinos se arman y nuestra soberanía tradicional corre peligro.\n\n¿Da su bendición real para forjar los arsenales que defenderán nuestras fronteras?"
 
- gemini_ask_industry:0 "Optimizar Industria y Economía"
- gemini_ask_industry_desc:0 "Consulta a Gemini IA cómo balancear tus fábricas civiles vs militares."
+ gemini_minister.1.a:0 "Proceda, Ministro. Priorice fábricas militares."
+ gemini_minister.1.b:0 "Aún no. Sigamos expandiendo la economía civil."
 
- gemini_ask_tech:0 "Prioridad de Investigación y Focos"
- gemini_ask_tech_desc:0 "Solicita consejo sobre tecnologías e investigaciones nacionales prioritarias."
+ gemini_minister.2.t_democratic:0 "§HAlerta del Gabinete: Crisis de Caucho y Aviación§!"
+ gemini_minister.2.d_democratic:0 "Señor Presidente, nuestras fábricas de cazas reportan falta crítica de caucho natural. Nuestras rutas marítimas mercantes son frágiles.\n\n¿Autoriza construir refinerías sintéticas en el interior del país?"
 
- gemini_ask_military:0 "Plantillas de División y Doctrina"
- gemini_ask_military_desc:0 "Pide recomendaciones de plantillas de combate eficaces."
+ gemini_minister.2.t_authoritarian:0 "§HInforme de Estado Mayor: Bloqueo de Recursos Estratégicos§!"
+ gemini_minister.2.d_authoritarian:0 "¡Comandante! La aviación y los vehículos militares sufren escasez de caucho. No podemos depender de tratados marítimos con naciones extranjeras.\n\n¿Autoriza el despliegue inmediato de refinerías sintéticas nacionales?"
 
- gemini_ask_general:0 "Diagnóstico Estratégico General"
- gemini_ask_general_desc:0 "Informe completo del estado de tu nación."
-
- gemini_advisor.ok:0 "Entendido, gracias Asesor."
- gemini_advisor.1.t:0 "Asesor Gemini: Optimización Industrial"
- gemini_advisor.1.d:0 "Regla de oro: Antes de 1938 construye únicamente Fábricas Civiles e Infraestructura al máximo en estados con más recursos. Transiciona a Militares 1.5 años antes de tu guerra principal. Mantener ratio mín 0.45 civ/mil."
- gemini_advisor.2.t:0 "Asesor Gemini: Investigación y Focos"
- gemini_advisor.2.d:0 "Prioridad absoluta: Herramientas Básicas y Construcción I/II de la rama de Industria. Luego Computación (bono velocidad investigación) y artillería o doctrinas según tu doctrina terrestre."
- gemini_advisor.3.t:0 "Asesor Gemini: Diseño de Divisiones"
- gemini_advisor.3.d:0 "Plantilla estándar de combate: 9 Infantería + 1 o 2 Artillería de línea. Compañías de apoyo recomendadas: Ingenieros, Artillería de apoyo y Antiaéreo (vital si no tienes superioridad aérea)."
- gemini_advisor.4.t:0 "Asesor Gemini: Diagnóstico General"
- gemini_advisor.4.d:0 "Estado General: Revisa reservas de petróleo y caucho. Sin caucho tus líneas de cazas perderán eficacia drásticamente. Construye refinerías sintéticas si no tienes acceso marítimo seguro a recursos."
+ gemini_minister.2.a:0 "Autorizado. Construyan refinerías de inmediato."
+ gemini_minister.2.b:0 "No por ahora. Buscaremos comercio exterior."

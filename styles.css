@@ -1,0 +1,477 @@
+:root {
+    --bg0: #080b12;
+    --bg1: #0d1320;
+    --bg2: #111b2a;
+    --bgc: #1c2840;
+    --rojo: #e03131;
+    --rojo2: #ff4d4d;
+    --teal: #00d2a0;
+    --teal2: #00ffcc;
+    --oro: #f0a500;
+    --t1: #e8edf5;
+    --t2: #8fa3bf;
+    --t3: #4a6080;
+    --borde: #1e2e45;
+    --borde2: #273d5e;
+    --r: 8px;
+    --r2: 12px;
+    --tr: 0.18s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+    background: var(--bg0);
+    color: var(--t1);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* Barra permanente a la derecha */
+    scrollbar-width: thin;
+    scrollbar-color: #0284c7 #0b0f19;
+}
+
+/* Scrollbars para Chrome / Edge */
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0284c7;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    height: 52px;
+    background: var(--bg1);
+    border-bottom: 1px solid var(--borde);
+    flex-shrink: 0;
+}
+
+.logo {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--rojo2);
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: var(--teal);
+}
+
+.badge {
+    background: rgba(0, 210, 160, 0.1);
+    border: 1px solid rgba(0, 210, 160, 0.3);
+    color: var(--teal);
+    padding: 3px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.estado-api {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--t2);
+}
+
+.punto {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--t3);
+}
+
+.punto.ok {
+    background: var(--teal);
+    box-shadow: 0 0 8px var(--teal);
+}
+
+/* Grid principal adaptativo */
+.grid {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) 420px;
+    flex: 1;
+    min-height: calc(100vh - 52px);
+}
+
+@media (max-width: 950px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .izq {
+        border-right: none;
+        border-bottom: 2px solid var(--borde);
+    }
+
+    .der {
+        height: 650px;
+    }
+}
+
+/* Panel Izquierdo */
+.izq {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    gap: 14px;
+    border-right: 1px solid var(--borde);
+}
+
+.panel {
+    background: var(--bg2);
+    border: 1px solid var(--borde);
+    border-radius: var(--r2);
+    padding: 15px;
+}
+
+.setup {
+    background: linear-gradient(135deg, rgba(0, 210, 160, 0.08), rgba(52, 152, 219, 0.05));
+    border: 1px solid rgba(0, 210, 160, 0.25);
+    border-radius: var(--r2);
+    padding: 16px;
+}
+
+.setup-titulo {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 6px;
+}
+
+.setup-desc {
+    color: var(--t2);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.setup-desc a {
+    color: var(--teal2);
+    text-decoration: none;
+}
+
+.fila {
+    display: flex;
+    gap: 8px;
+}
+
+/* Inputs y Formularios */
+.inp {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--borde2);
+    border-radius: var(--r);
+    color: var(--t1);
+    padding: 9px 13px;
+    font-size: 13px;
+    outline: none;
+    min-width: 0;
+}
+
+.inp:focus {
+    border-color: var(--teal);
+}
+
+select.inp option {
+    background: var(--bgc);
+}
+
+.fg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+}
+
+.fg2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+    gap: 10px;
+}
+
+.fgrp {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.lbl {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--t3);
+}
+
+.sec-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.sec-titulo {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--t2);
+}
+
+.sec-linea {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--borde2), transparent);
+}
+
+/* Tarjetas de Fábrica */
+.fab-card {
+    background: var(--bgc);
+    border: 1px solid var(--borde);
+    border-radius: var(--r);
+    padding: 10px;
+    text-align: center;
+    min-width: 0;
+}
+
+.fab-icon {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.fab-inp {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--borde2);
+    color: inherit;
+    outline: none;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.fab-card.oro .fab-inp {
+    color: var(--oro);
+}
+
+.fab-card.rojo .fab-inp {
+    color: var(--rojo2);
+}
+
+.fab-card.azul .fab-inp {
+    color: #5dade2;
+}
+
+.fab-sub {
+    font-size: 10px;
+    color: var(--t3);
+}
+
+/* Botones */
+.btn {
+    padding: 9px 18px;
+    border-radius: var(--r);
+    border: none;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.btn-teal {
+    background: linear-gradient(135deg, var(--teal), #00b890);
+    color: #080b12;
+}
+
+.btn-rojo {
+    background: linear-gradient(135deg, var(--rojo), var(--rojo2));
+    color: #fff;
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* Panel Derecho (Chat) */
+.der {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg1);
+    border-left: 1px solid var(--borde);
+}
+
+.chat-header {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--borde);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.ai-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(0, 210, 160, 0.15);
+    border: 1px solid rgba(0, 210, 160, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.ai-nombre {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--teal);
+}
+
+.ai-sub {
+    font-size: 11px;
+    color: var(--t3);
+}
+
+.chat-cuerpo {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.msg {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.msg-lbl {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--t3);
+}
+
+.burbuja {
+    padding: 11px 14px;
+    border-radius: var(--r);
+    font-size: 13px;
+    line-height: 1.6;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+}
+
+.msg.usuario .burbuja {
+    background: rgba(52, 152, 219, 0.12);
+    border: 1px solid rgba(52, 152, 219, 0.25);
+}
+
+.msg.asistente .burbuja {
+    background: rgba(0, 210, 160, 0.06);
+    border: 1px solid rgba(0, 210, 160, 0.18);
+}
+
+.msg.sistema .burbuja {
+    background: rgba(224, 49, 49, 0.08);
+    border: 1px solid rgba(224, 49, 49, 0.2);
+    color: #e07878;
+}
+
+.msg.bien .burbuja {
+    background: rgba(23, 32, 52, 0.8);
+    border: 1px solid var(--borde);
+}
+
+/* Quick Chips */
+.chips {
+    padding: 0 14px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.chip {
+    padding: 4px 9px;
+    background: rgba(23, 32, 52, 0.8);
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+    font-size: 11px;
+    color: var(--t2);
+    cursor: pointer;
+}
+
+.chip:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+}
+
+.chat-pie {
+    padding: 12px 15px;
+    border-top: 1px solid var(--borde);
+    display: flex;
+    gap: 8px;
+}
+
+#chatInp {
+    flex: 1;
+    resize: none;
+    height: 44px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.btn-env {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--r);
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--teal), #00b890);
+    font-size: 16px;
+    font-weight: bold;
+}

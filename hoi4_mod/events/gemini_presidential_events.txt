@@ -1,0 +1,106 @@
+add_namespace = gemini_minister
+
+# =========================================================================
+# 1. EVENTO: TRANSICIÓN A FÁBRICAS MILITARES Y REARME
+# =========================================================================
+country_event = {
+	id = gemini_minister.1
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+
+	# Titulo dinámico según la ideología
+	title = {
+		text = gemini_minister.1.t_democratic
+		trigger = { has_government = democratic }
+	}
+	title = {
+		text = gemini_minister.1.t_fascism
+		trigger = { has_government = fascism }
+	}
+	title = {
+		text = gemini_minister.1.t_communism
+		trigger = { has_government = communism }
+	}
+	title = {
+		text = gemini_minister.1.t_neutrality
+		trigger = { has_government = neutrality }
+	}
+
+	# Descripción dinámica según la ideología
+	desc = {
+		text = gemini_minister.1.d_democratic
+		trigger = { has_government = democratic }
+	}
+	desc = {
+		text = gemini_minister.1.d_fascism
+		trigger = { has_government = fascism }
+	}
+	desc = {
+		text = gemini_minister.1.d_communism
+		trigger = { has_government = communism }
+	}
+	desc = {
+		text = gemini_minister.1.d_neutrality
+		trigger = { has_government = neutrality }
+	}
+
+	# Opción A: Priorizar Fábricas Militares
+	option = {
+		name = gemini_minister.1.a
+		set_country_flag = gemini_focus_mils
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 } }
+			add_building_construction = { type = arms_factory level = 2 instant_build = no }
+		}
+	}
+
+	# Opción B: Continuar expansión civil
+	option = {
+		name = gemini_minister.1.b
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 } }
+			add_building_construction = { type = industrial_complex level = 2 instant_build = no }
+		}
+	}
+}
+
+# =========================================================================
+# 2. EVENTO: ALERTA DE CAUCHO Y SUMINISTRO AERONÁUTICO
+# =========================================================================
+country_event = {
+	id = gemini_minister.2
+	picture = GFX_report_event_physics_lab
+	is_triggered_only = yes
+
+	title = {
+		text = gemini_minister.2.t_democratic
+		trigger = { has_government = democratic }
+	}
+	title = {
+		text = gemini_minister.2.t_authoritarian
+		trigger = { NOT = { has_government = democratic } }
+	}
+
+	desc = {
+		text = gemini_minister.2.d_democratic
+		trigger = { has_government = democratic }
+	}
+	desc = {
+		text = gemini_minister.2.d_authoritarian
+		trigger = { NOT = { has_government = democratic } }
+	}
+
+	# Opción A: Construir refinerías sintéticas
+	option = {
+		name = gemini_minister.2.a
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = synthetic_refinery size > 0 } }
+			add_building_construction = { type = synthetic_refinery level = 1 instant_build = no }
+		}
+	}
+
+	# Opción B: Comercio internacional
+	option = {
+		name = gemini_minister.2.b
+	}
+}
